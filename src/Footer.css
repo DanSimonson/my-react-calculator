@@ -1,0 +1,47 @@
+.footer {
+  /*position: fixed;
+  left: 0;
+  bottom: 0;*/
+  width: 100%;
+  background-color: #00b6f1;
+}
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  color: black;   
+  }
+.copyright p{
+    margin-right: 10px;
+}
+.copyright a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #111;
+    transition: all 0.3s;
+}
+.copyright a:hover,
+.copyright a:active {
+    color: #cccccc;
+  }
+.copyright h4 {
+    font-size: 1rem;
+}
+  .fas.fa-heart {
+    color: red;
+  }
+
+  i.fab.fa-github {
+    color: #040204; 
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  i.fab.fa-github:hover {
+    color: #cccccc; 
+  }
+
+  p {
+    font-size: 1rem;
+  }
