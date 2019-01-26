@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div class="footer">
             <div class="copyright">
-                <p>Vue.js calculator <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} />2018</p>
+                <p>React.js calculator <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} />2018</p>
                 <a href="https://github.com/DanSimonson/calculator-with-react" target="_blank" aria-label="Facebook">
                     <i class="fab fa-github fa-lg">&nbsp; See Code In GitHub Repository</i>
                 </a>
