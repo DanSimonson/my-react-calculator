@@ -7,29 +7,39 @@ class App extends Component {
     super(props);
 
     this.state = {
-      result: '0'
+      result: ''
     }
   };
   addToInput = (param, e) => {
     let newString = this.state.result;
     let stringLength = this.state.result.length;
+    var lastChar = newString.substr(newString.length - 1);
     if (param === "0" && stringLength <= 1) {
-      newString = newString.substr(0);
       this.setState({ result: param })
-    } else if (stringLength === 2 && newString[0] === '0') {
-      while (newString.charAt(0) === '0') {
-        newString = newString.substr(1);
+    } else if (newString.length >= 3) {
+      if (param === '0') {
+        if (lastChar === '0') {
+          //&& param === 0
+          //&& lastChar == '0'
+          let noMultipleZerosString = newString;/*newString.slice(0, -1);*/
+          this.setState({ result: noMultipleZerosString })
+        } else {
+          this.setState({ result: this.state.result + param });
+        }
       }
-      this.setState({ result: newString + param })
-    } else {
+      else {
+        this.setState({ result: this.state.result + param });
+      }
+    }else {
       this.setState({ result: this.state.result + param });
       console.log('result: ', this.state.result);
     }
 
+
   }
   clear = () => {
     this.setState({
-      result: '0'
+      result: ''
     });
   }
   math = (operator, e) => {
